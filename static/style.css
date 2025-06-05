@@ -257,6 +257,19 @@ html {
 }
 /* ... (keep all existing styles) ... */
 
+.loading-message {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loading-text {
+    color: white;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+}
+
 .loading-dots {
     display: flex;
     align-items: center;
