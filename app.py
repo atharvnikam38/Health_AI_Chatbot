@@ -58,8 +58,8 @@ class GroqChatLLM(LLM):
         data = {
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 500,
-            "temperature": 0.4,
+            "max_tokens": 200,
+            "temperature": 0.3,
         }
         response = requests.post(self.api_url, headers=headers, json=data)
         response.raise_for_status()
