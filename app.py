@@ -6,7 +6,6 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
-port = int(os.environ.get("PORT", 5000))
 import requests
 from langchain.llms.base import LLM
 from typing import Optional, List, Mapping, Any
@@ -93,4 +92,5 @@ def chat():
     return str(response["answer"])
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
